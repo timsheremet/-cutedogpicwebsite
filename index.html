@@ -18,14 +18,20 @@
     <script>
       // console.log(document.getElementById("dog-pic"))
       function reqListener () {
-  console.log(JSON.parse(this.responseText).message);
+        const imageUrl = JSON.parse(this.responseText).message
+        console.log(JSON.parse(this.responseText).message);
+        const imageNode = document.createElement("img")
+        imageNode.src = imageUrl
+        document.getElementById("dog-pic").appendChild(imageNode)
+        document.getElementById("dog-pic").style.height = "300px"
+        document.getElementById("dog-pic").style.width = "300px"
 }
 
 var oReq = new XMLHttpRequest();
 oReq.addEventListener("load", reqListener);
 oReq.open("GET", "https://dog.ceo/api/breeds/image/random");
 oReq.send();
-      // document.getElementById("dog-pic")
+      
     </script>
   </body>
 </html>
