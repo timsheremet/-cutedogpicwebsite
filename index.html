@@ -15,10 +15,10 @@
         const imageUrl = JSON.parse(this.responseText).message
         console.log(JSON.parse(this.responseText).message);
         const imageNode = document.createElement("img")
-        imageNode.style.width = "90vw"
-        imageNode.style.height = "auto"
-        imageNode.style.marginRight = "auto"
-        imageNode.style.marginLeft = "auto"
+        imageNode.style.width = "auto"
+        imageNode.style.height = "80vh"
+        imageNode.style.marginRight = "5vw"
+        imageNode.style.marginLeft = "5vw"
         imageNode.src = imageUrl
         document.getElementById("dog-pic").appendChild(imageNode)
 //         document.getElementById("dog-pic").style.height = "300px"
