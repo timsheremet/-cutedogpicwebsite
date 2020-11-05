@@ -7,22 +7,18 @@
   </head>
    <body>
     <h1>Cute Dog Pics</h1>
-    
-    <p>Our website will
-      <div id="dog-pic"></div>
-        <ul>
-            <li>Search reddit for a cute dog pic</li>
-            <li>When you open the website a dog pic shows up</li>
-        </ul>
-    </p>
+     <button onclick="window.location.reload()">Click Me</button>
+    <div id="dog-pic"></div>
     <script>
       // console.log(document.getElementById("dog-pic"))
       function reqListener () {
         const imageUrl = JSON.parse(this.responseText).message
         console.log(JSON.parse(this.responseText).message);
         const imageNode = document.createElement("img")
-        imageNode.style.width = "300px"
+        imageNode.style.width = "90vw"
         imageNode.style.height = "auto"
+        imageNode.style.marginRight = "auto"
+        imageNode.style.marginLeft = "auto"
         imageNode.src = imageUrl
         document.getElementById("dog-pic").appendChild(imageNode)
 //         document.getElementById("dog-pic").style.height = "300px"
